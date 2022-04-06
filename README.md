@@ -8,6 +8,9 @@ the ``g`` script is found.
 Auto-completion can be enabled in Bash by sourcing the provided
 auto-completion script ``g-completion.bash``, e.g. in the Bash startup files.
 
+The ``up`` macro, defined in ``git-up-macro`` shall be added to the ``$HOME/.gitconfig``
+git configuration file.
+
 # Configuration file
 
 The location of all git repositories, as well as the repository groups

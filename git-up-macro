@@ -1,0 +1,2 @@
+[alias]
+	up = "!f() { git add .; if [ \"${1}\" == \"\" ]; then msg=\"update\"; else msg=${*}; fi; git commit -m\"${msg}\"; git push; }; f"
