@@ -8,9 +8,6 @@ the ``g`` script is found.
 Auto-completion can be enabled in Bash by sourcing the provided
 auto-completion script ``g-completion.bash``, e.g. in the Bash startup files.
 
-The ``up`` macro, defined in ``git-up-macro`` shall be added to the ``$HOME/.gitconfig``
-git configuration file.
-
 # Configuration file
 
 The location of all git repositories, as well as the repository groups
@@ -51,6 +48,19 @@ operations will not be available
 
 e.g.: ``gg      hostA,hostB,hostC  ~/notes notes``
 
+# git up macro
+
+The ``up`` macro, defined in ``git-up-macro`` can be added to the ``$HOME/.gitconfig``
+git configuration file.
+
+It defines an action ``git up``, which adds all modifications,
+commits with the message "update" and pushes upstream.
+If used as ``git up foo bar`` it uses the rest of the line as commit
+message.
+It should not be used in repositories where commit messages matter.
+Thus the configuration file of git-batch-op (see below) allows to
+specify that the ``up`` operation (when called using ``g``) is allowed
+on specific group (and sets of groups) of repositories.
 
 # Command line interface
 
