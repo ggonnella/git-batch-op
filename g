@@ -2,6 +2,10 @@
 # %-PURPOSE-%
 # perform batch operations on single or multiple git repositories
 
+#
+# (c) Copyright 2019-2022 Giorgio Gonnella
+#
+
 function parse_list_options {
   if [ "$1" == "--list-operations" ]; then
     echo -n "pl st df lg up ls cd --conf"
