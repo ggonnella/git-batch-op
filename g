@@ -148,6 +148,10 @@ function pl {
 
 function st {
   cd $location
+  ahead=$(git status --short --branch | grep -P -o "(?<=ahead )\d+")
+  if [ -n "$ahead" ]; then echo -e "\033[31mahead\033[0m ${ahead} commit"; fi
+  behind=$(git status --short --branch | grep -P -o "(?<=behind )\d+")
+  if [ -n "$behind" ]; then echo -e "\033[31mbehind\033[0m ${behind} commit"; fi
   git status --short
   cd $backuppwd
 }
